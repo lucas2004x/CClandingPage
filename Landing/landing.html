@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaotic Cards</title>
+  <link rel="icon" type="image/png" href="imagenes/ccLogo.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-titulo">
+        <img src="imagenes/ccLogo.png" class="logo" alt="Logo Chaotic Cards">
+        <ul class="menu">
+          <li><a href="#hero" class="btn inicio">Inicio</a></li>
+          <li><a href="#descripcion" class="btn descripcion">Descripción</a></li>
+          <li><a href="#guia" class="btn guia">Guia</a></li>
+          <li><a href="#cartas" class="btn cartas">Cartas</a></li>
+        </ul>
+      </div>
+      <a href="https://httpstat.us/503" class="btn jugar">Jugar</a>
+    </nav>
+  </header>
+
+  <!-- SECCION DE INICIO -->
+  <section class="hero" id="hero">
+      <img src="imagenes/titulo.png" alt="Chaotic Cards" class="hero-title">
+  </section>
+
+  <section id="descripcion" class="descripcion">
+    <div class="contenido">
+      <img src="imagenes/descripcionimg.png" alt="portada" class="portada">
+      <h2>Descripción del Juego</h2>
+      <p>Chaotic Cards es un juego de cartas por turno, ambientado en un mundo de fantasia y ciencia ficcion, dicho de otro modo,
+        un mundo donde la magia y tecnologia son cosas del dia a dia, con una variedad de personajes que estan plasmados en cartas que 
+        describen y mencionan su historia, estadisticas y habilidades, arma tu mazo con los personajes que mas sean de tu agrado y 
+        aventurate a los duelos de cartas poniendo a prueba tu determinacion en duelos de cartas donde la habilidad definira al ganador.
+        <br><br>Para mas informacion del juego, mecanicas, historia, cartas y mas. Visita nuestro <a href="https://trello.com/b/WuGDBRZr/chaotic-cards-oficial-trello" class="trello">Trello oficial</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCION DE GUIA -->
+  <section id="guia" class="guia">
+    <div class="contenido">
+      <img src="imagenes/guiaimg.png" alt="portada" class="portada">
+      <h2>Guia del juego</h2>
+      <p>Por el momento, solo contamos con un simple prototipo del juego de CHAOTIC CARDS, a futuro se espera que sea un juego online
+        donde los duelos se puedan dar entre 2 jugadores, jugador 1 contra jugador 2, por el momento, en el prototipo solo puedes 
+        enfrentar a un bot, una vez iniciado el duelo, utiliza las cartas que tienes en el mazo, para ganar el duelo deberas usar las
+        cartas con las que cuentas en el mazo, puedes realizar ataques basicos o habilidades especiales que varian segun la carta 
+        con la que elijas actuar.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCION DE CARTAS -->
+<section id="cartas" class="cartas">
+  <div class="contenido">
+    <h2>Cartas</h2>
+
+    <div class="carrusel">
+      <!-- radios (ocultos) -->
+      <input type="radio" name="switch" id="carta1" checked>
+      <input type="radio" name="switch" id="carta2">
+      <input type="radio" name="switch" id="carta3">
+      <input type="radio" name="switch" id="carta4">
+
+      <!-- contenedor de todas las cartas (se moverá según radio) -->
+      <div class="cartas-wrapper">
+        <!-- Carta 1 -->
+        <div class="carta">
+          <div class="carta-img">
+            <img src="imagenes/carta1.png" alt="Carta 1">
+          </div>
+          <div class="carta-info">
+            <h3>Magic Samurai</h3>
+            <p>Un samurai de ya una gran edad, que se mantiene firme sobre la vieja tradición del uso de las  capacidades físicas y mágicas de uno mismo, aborreciendo la idea de los nuevos samuráis mejorados tecnológicamente, que pese a que la vejez lo limita bastante físicamente, gracias a la magia y su gran control sobre los elementos principales tierra, agua, fuego y aire, es capaz de desenvainar su katana una vez más, fervientemente… y simplemente descansará el dia que pueda vengarse de su hermano.</p>
+            <h3>Habilidades</h3>
+            <ul>
+              <li>Corte ígneo</li>
+              <li>Mentalidad aquatica</li>
+              <li>Corte ventoso</li>
+              <li>Piel de roca</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Carta 2 -->
+        <div class="carta">
+          <div class="carta-img">
+            <img src="imagenes/carta2.png" alt="Carta 2">
+          </div>
+          <div class="carta-info">
+            <h3>Tech Samurai</h3>
+            <p>La sombra de su hermano, un samurai mediocre que nunca pudo desarrollar o demostrar tal afinidad descomunal como la de su rival, frustrado, agotado, sabiendo que por el sendero de un samurai mágico tradicional nunca lograría superar o igualar, recurre a las mejoras cibernéticas, consiguiendo resultados excepcionales, la edad ya no limita su desempeño al combate gracias a su nuevo cyber cuerpo.</p>
+            <h3>Habilidades</h3>
+            <ul>
+              <li>Embestida shockeante</li>
+              <li>Reflejos mejorados</li>
+              <li>Corte cohete</li>
+              <li>Corte blaster</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Carta 3 -->
+        <div class="carta">
+          <div class="carta-img">
+            <img src="imagenes/carta3.png" alt="Carta 3">
+          </div>
+          <div class="carta-info">
+            <h3>Gamma Soldier</h3>
+            <p>Un soldado sometido a experimentos para lograr lo imposible, que el cuerpo humano sea capaz de soportar y aprovechar la energía gamma, realizado no solo a uno si no a miles, el único caso exitoso y a su vez desafortunado fue el, su cuerpo genera constantemente energía gamma, mediante la fisión nuclear este es capaz de provocar explosiones destructivas que varían su capacidad destructividad según la energia que acumule o use, pese a su gran poder destructivo, sus capacidades físicas son las de un simple humano, pese a ello, se cree la forma de vida absoluta, al contar con el poder de la destrucción nuclear en la palma de su mano.</p>
+            <h3>Habilidades</h3>
+            <ul>
+              <li>Esfera gamma</li>
+              <li>Curación gamma</li>
+              <li>Gamma blaster</li>
+              <li>Escudo gamma</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Carta 4 -->
+        <div class="carta">
+          <div class="carta-img">
+            <img src="imagenes/carta4.png" alt="Carta 4">
+          </div>
+          <div class="carta-info">
+            <h3>Spider-hunter</h3>
+            <p>Un ladrón que luego de robar un Tótem araña maldito, fue maldecido por un dios araña, condenandolo a compensar cada uno de sus pecados mediante buenas acciones, sin importar el método, con habilidades sobrehumanas como trepar, adherirse a superficies y adherir, ser capaz de generar su propia telaraña de manera orgánica, reflejos sobrehumanos y demas capacidades sobrehumanas, este obligadamente opera como vigilante hasta lograr compensar todo el mal que a hecho.</p>
+            <h3>Habilidades</h3>
+            <ul>
+              <li>Enredadera web</li>
+              <li>Web slam</li>
+              <li>Super senses</li>
+              <li>Spider-bite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- NAVS: aquí hay varios labels pero SOLO SE MOSTRARÁN 2 (izq/der) según el radio checked -->
+      <div class="navs">
+        <!-- para estado carta1: izquierda->carta3, derecha->carta2 -->
+        <label for="carta4" class="nav left">&#10094;</label>
+        <label for="carta2" class="nav right">&#10095;</label>
+
+        <!-- para estado carta2: izquierda->carta1, derecha->carta3 -->
+        <label for="carta1" class="nav left">&#10094;</label>
+        <label for="carta3" class="nav right">&#10095;</label>
+
+        <!-- para estado carta3: izquierda->carta2, derecha->carta4 -->
+        <label for="carta2" class="nav left">&#10094;</label>
+        <label for="carta4" class="nav right">&#10095;</label>
+
+        <!-- para estado carta4: izquierda->carta3, derecha->carta1 -->
+        <label for="carta3" class="nav left">&#10094;</label>
+        <label for="carta1" class="nav right">&#10095;</label>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <p>© <a href="https://http.cat/503" class="group">Gaming Group </a>/ Todos los derechos reservados / Gmail:noseq@gmail.com</p>
+  </footer>
+</body>
+</html>

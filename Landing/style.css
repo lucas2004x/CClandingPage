@@ -1,0 +1,438 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Cinzel Decorative', serif; /* estilo mágico */
+    background-image: url("imagenes/menu-fondo2.png"); /* tu imagen */
+    background-size: cover;       /* hace que cubra toda la pantalla */
+    background-repeat: no-repeat; /* evita que se repita */
+    background-attachment: fixed; /* la imagen queda fija al hacer scroll */
+    background-position: center;  /* centrada */
+  }
+
+  h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif; /* estilo tecnológico */
+  }
+
+  /* Hero Section */
+.hero {
+  background-size: cover;
+  height: 100vh;           /* solo ocupar la altura visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;       /* deja espacio para el menú */
+  box-sizing: border-box;
+  background: url('imagenes/fondoLanding.jpg') no-repeat center center/cover; /* si quieres un fondo */
+}
+
+.hero-title {
+  max-width: 80%; /* evita que se desborde en pantallas chicas */
+  height: auto;
+}
+  
+  /* Barra de navegación */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("imagenes/menu-fondo.png");
+    background-size: cover;   /* Hace que la imagen cubra toda la barra */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-position: center;  /* Centra la imagen */
+    padding: 10px 20px;
+    /* 🔹 Borde difuminado en todos los lados */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* ocupa todo el ancho */
+    z-index: 1000; /* se asegura que quede encima */
+  }
+  
+
+  .logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+
+  .menu li a {
+    display: inline-block;
+    padding: 12px 25px; /* espacio interno */
+    font-weight: bold;
+    color: #FFD700; /* texto encima de la imagen */
+    text-decoration: none;
+    border-radius: 12px; /* bordes redondeados */
+    background: url("imagenes/fondoBoton2.png") no-repeat center center/cover;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Hover para dar efecto */
+  .menu li a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #FFD700; /* resplandor dorado */
+  }
+
+
+/*BOTON DE JUGAR*/
+/* 🔹 Botón Jugar (destacado, derecha) */
+.btn.jugar {
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00BFFF;
+  border-radius: 15px;
+  background: url("imagenes/fondoBoton2.png") no-repeat center center/cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.btn.jugar:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 30px #00BFFF;
+}
+
+
+#descripcion h2 {
+  color: #FFD700; /* subtítulo dorado */
+  margin-bottom: 20px;
+}
+
+/* 🔹 Sección Guía */
+
+#guia h2 {
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Sección Cartas */
+#cartas {
+  background: url("fondoCartas.png") no-repeat center center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: #00BFFF;
+}
+
+#cartas h2 {
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+/* SECCION DE LA DESCRIPCION*/
+#descripcion {
+  height: 100vh; /* ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column; /* apila portada arriba y caja abajo */
+  padding-top: 80px;        /* deja espacio para el navbar */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;         /* evita que se desborde */
+}
+
+#descripcion .contenido {
+  background: rgba(10, 10, 20, 0.85); /* oscuro con transparencia */
+  padding: 60px;
+  border-radius: 20px;
+  max-width: 900px;
+  text-align: center;
+  color: #00BFFF;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.6); /* resplandor tecnológico */
+  border: 2px solid rgba(0, 191, 255, 0.8);
+
+  /* Detalles estilo "circuito" con pseudo-elementos */
+  position: relative;
+  overflow: hidden;
+}
+
+#descripcion .contenido::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0, 191, 255, 0.1) 0,
+    rgba(0, 191, 255, 0.1) 2px,
+    transparent 2px,
+    transparent 40px
+  );
+  animation: moverCircuitos 10s linear infinite;
+  z-index: 0;
+}
+
+
+#descripcion .portada {
+  max-height: 50%;          /* limita la altura de la imagen */
+  width: auto;
+  object-fit: contain;       /* mantiene proporción */
+}
+
+#descripcion .caja-texto {
+  max-height: 40%;          /* limita altura de la caja */
+  overflow-y: auto;         /* si el texto es mucho, scroll interno */
+  margin-top: 20px;
+}
+
+#descripcion h2,
+#descripcion p,
+#descripcion img {
+  position: relative;
+  z-index: 1; /* para que estén sobre el pseudo-elemento */
+}
+
+#descripcion h2 {
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+@keyframes moverCircuitos {
+  from { transform: translate(0, 0); }
+  to { transform: translate(40px, 40px); }
+}
+
+/* SECCION DE GUIA */
+#guia {
+  height: 100vh; /* ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column; /* apila portada arriba y caja abajo */
+  padding-top: 80px;        /* deja espacio para el navbar */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;         /* evita que se desborde */
+}
+
+#guia .contenido {
+  background: rgba(10, 10, 20, 0.85); /* oscuro con transparencia */
+  padding: 60px;
+  border-radius: 20px;
+  max-width: 900px;
+  text-align: center;
+  color: #00BFFF;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.6); /* resplandor tecnológico */
+  border: 2px solid rgba(0, 191, 255, 0.8);
+
+  /* Detalles estilo "circuito" con pseudo-elementos */
+  position: relative;
+  overflow: hidden;
+}
+
+#guia .contenido::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0, 191, 255, 0.1) 0,
+    rgba(0, 191, 255, 0.1) 2px,
+    transparent 2px,
+    transparent 40px
+  );
+  animation: moverCircuitos 10s linear infinite;
+  z-index: 0;
+}
+
+
+#guia .portada {
+  max-height: 50%;          /* limita la altura de la imagen */
+  width: auto;
+  object-fit: contain;       /* mantiene proporción */
+}
+
+#guia .caja-texto {
+  max-height: 40%;          /* limita altura de la caja */
+  overflow-y: auto;         /* si el texto es mucho, scroll interno */
+  margin-top: 20px;
+}
+
+#guia h2,
+#guia p,
+#guia img {
+  position: relative;
+  z-index: 1; /* para que estén sobre el pseudo-elemento */
+}
+
+#guia h2 {
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+@keyframes moverCircuitos {
+  from { transform: translate(0, 0); }
+  to { transform: translate(40px, 40px); }
+}
+
+/* SECCION DE CARTAS */
+#cartas {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* espacio para navbar fijo */
+  box-sizing: border-box;
+}
+
+#cartas .contenido {
+  background: rgba(10,10,20,0.88);
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 1100px;
+  width: 92%;
+  text-align: center;
+  color: #FFD700;
+  box-shadow: 0 0 25px rgba(0,191,255,0.6);
+  border: 2px solid rgba(0,191,255,0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* contenedor horizontal que desliza las cartas */
+.carrusel { position: relative; }
+input[type="radio"] { display: none; }
+
+.cartas-wrapper {
+  display: flex;
+  width: 400%;               /* N * 100% (3 cartas) */
+  transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+  #carta4:checked ~ .cartas-wrapper { transform: translateX(-300%); }
+}
+
+/* cada 'carta' ocupa 100% del contenedor visible */
+.carta {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* imagen izquierda, texto derecha */
+  gap: 30px;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+/* imagen a la izquierda */
+.carta-img img {
+  max-height: 3000px;
+  max-width: 260px;
+  width: auto;
+  margin-right: 20px;    /* <--- deja aire entre imagen y texto */
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(0,191,255,0.45);
+}
+
+/* info a la derecha */
+.carta-info {
+  flex: 1;               /* <--- ocupa todo el espacio disponible */
+  text-align: left;
+  max-width: 550px;
+  color: #FFD700;
+}
+.carta-info h3 { font-size: 26px; margin-bottom: 8px; }
+.carta-info p  { color: #00BFFF; margin-bottom: 12px; line-height: 1.4; }
+.carta-info ul { list-style: none; padding: 0; margin:0; }
+.carta-info li { color: #00BFFF; margin: 6px 0; }
+
+/* transform según radio checked — ajusta si agregas más cartas */
+#carta1:checked ~ .cartas-wrapper { transform: translateX(0%); }
+#carta2:checked ~ .cartas-wrapper { transform: translateX(-100%); }
+#carta3:checked ~ .cartas-wrapper { transform: translateX(-200%); }
+#carta4:checked ~ .cartas-wrapper { transform: translateX(-300%); }
+
+/* NAVS (solo 2 visibles a la vez; posicionadas a los bordes) */
+.navs { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); pointer-events: none; }
+
+/* por defecto ocultan todos los labels (los mostraremos con reglas específicas abajo) */
+.navs .nav { display: none; pointer-events: auto; position: absolute; top: 50%; transform: translateY(-50%); font-size: 44px; color: #FFD700; cursor: pointer; padding: 8px; transition: transform .15s, color .15s; }
+.navs .nav:hover { transform: translateY(-50%) scale(1.15); color: #00BFFF; }
+
+/* izquierda / derecha (mismo lugar para todos, solo se mostrará el correcto) */
+.navs .left  { left: 18px; }
+.navs .right { right: 18px; }
+
+/* reglas para mostrar únicamente las dos flechas correctas según el radio seleccionado */
+#carta1:checked ~ .navs label.left[for="carta4"],
+#carta1:checked ~ .navs label.right[for="carta2"] {
+  display: block;
+}
+#carta2:checked ~ .navs label.left[for="carta1"],
+#carta2:checked ~ .navs label.right[for="carta3"] {
+  display: block;
+}
+#carta3:checked ~ .navs label.left[for="carta2"],
+#carta3:checked ~ .navs label.right[for="carta4"] {
+  display: block;
+}
+#carta4:checked ~ .navs label.left[for="carta3"],
+#carta4:checked ~ .navs label.right[for="carta1"] {
+  display: block;
+}
+
+/* ajustes responsivos */
+@media (max-width: 900px) {
+  .carta { flex-direction: column; gap: 18px; text-align: center; }
+  .carta-img img { max-height: 220px; }
+  .carta-info { max-width: 100%; }
+  .navs .nav { font-size: 36px; left: 8px; right: 8px; }
+}
+
+/* PIE DE PÁGINA */
+footer {
+  background: url("imagenes/menu-fondo.png") no-repeat center center/cover;
+  padding: 20px;
+  text-align: center;
+  color: #00BFFF; /* mismo azul tecnológico */
+  font-weight: bold;
+  box-shadow: 0 -4px 20px rgba(0, 191, 255, 0.4); /* efecto de luz en la parte superior */
+  border-top: 2px solid rgba(0, 191, 255, 0.6);
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.group {
+  color: red;
+  text-decoration: none; /* opcional, para quitar el subrayado */
+}
+
+.trello {
+  color: #FFD700;
+  text-decoration: none;
+}
